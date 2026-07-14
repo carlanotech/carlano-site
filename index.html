@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlano Technology Solutions LLC — Engineering for the planet and people</title>
+<meta name="description" content="Carlano Technology Solutions LLC builds engineering systems that reduce waste and resource load — automated bulk-refill pumps that cut single-use plastic, and an AI bridge that shifts compute from datacenters onto local, renewable-powered machines.">
+<meta name="author" content="Carlano Technology Solutions LLC">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Carlano Technology Solutions LLC">
+<meta property="og:description" content="Engineering that helps the planet and people.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/carlano-fulllogo-trim.png">
+<link rel="icon" type="image/png" href="assets/carlano-ring-nav.png">
+
+<style>
+  :root{
+    --ink:#0e1726;
+    --ink-soft:#3a4658;
+    --muted:#6b7689;
+    --line:#e3e7ee;
+    --bg:#ffffff;
+    --bg-alt:#f6f8fb;
+    --accent:#58a136;       /* Carlano brand green */
+    --accent-deep:#3f7a23;
+    --accent-soft:#eef6e8;
+    --maxw:1080px;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(14,23,38,.04), 0 8px 30px rgba(14,23,38,.06);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:13px;font-weight:700;letter-spacing:-.01em;font-size:1.15rem;color:var(--ink)}
+  .brand:hover{text-decoration:none}
+  .mark{width:40px;height:40px;flex:0 0 auto;object-fit:contain;display:block}
+  .hero-logo{max-width:380px;width:66%;height:auto;margin-bottom:34px;display:block}
+  @media(max-width:640px){.hero-logo{width:82%}}
+  .navlinks{display:flex;gap:28px;font-size:.93rem}
+  .navlinks a{color:var(--ink-soft);font-weight:500}
+  .navlinks a:hover{color:var(--accent-deep);text-decoration:none}
+  @media(max-width:640px){.navlinks{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--accent-deep);
+    background:var(--accent-soft);padding:6px 12px;border-radius:999px;margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.025em;
+    font-weight:760;max-width:16ch;margin-bottom:22px;
+  }
+  .hero p.lede{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--ink-soft);max-width:60ch;margin-bottom:32px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;font-size:.95rem;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+  .btn-primary:hover{background:var(--accent-deep);text-decoration:none;transform:translateY(-1px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink);background:#fff}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep);text-decoration:none}
+
+  /* ---------- section scaffolding ---------- */
+  section{padding:76px 0}
+  .section-alt{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{max-width:62ch;margin-bottom:44px}
+  .sec-head .kicker{font-size:.8rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px}
+  .sec-head h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+  .sec-head p{color:var(--ink-soft);font-size:1.05rem}
+
+  /* ---------- projects ---------- */
+  .projects{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:760px){.projects{grid-template-columns:1fr}}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;
+  }
+  .card .tag{font-size:.74rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:16px}
+  .card h3{font-size:1.32rem;letter-spacing:-.01em;margin-bottom:12px}
+  .card p{color:var(--ink-soft);margin-bottom:14px}
+  .card .impact{
+    margin-top:auto;padding-top:18px;border-top:1px solid var(--line);
+    font-size:.92rem;color:var(--muted);
+  }
+  .card .impact strong{color:var(--accent-deep);font-weight:650}
+  .cicon{width:38px;height:38px;margin-bottom:18px}
+
+  /* ---------- services ---------- */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:760px){.grid3{grid-template-columns:1fr}}
+  .svc h3{font-size:1.1rem;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+  .svc p{color:var(--ink-soft);font-size:.98rem}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:28px}}
+  .about p{color:var(--ink-soft);font-size:1.06rem;margin-bottom:18px}
+  .principles{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .principles h4{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:16px}
+  .principles ul{list-style:none}
+  .principles li{padding:11px 0;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.96rem}
+  .principles li:first-child{border-top:none}
+
+  /* ---------- contact ---------- */
+  .contact{text-align:center}
+  .contact h2{font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.02em;margin-bottom:14px}
+  .contact p{color:var(--ink-soft);font-size:1.1rem;max-width:52ch;margin:0 auto 30px}
+  .mail{
+    display:inline-block;font-size:1.15rem;font-weight:600;color:var(--accent-deep);
+    border:1px solid var(--line);background:#fff;border-radius:10px;padding:14px 26px;box-shadow:var(--shadow);
+  }
+  .mail:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px);transition:transform .12s ease}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img class="mark" src="assets/carlano-ring-nav.png" alt="Carlano Technology Solutions logo">
+      Carlano
+    </a>
+    <nav class="navlinks">
+      <a href="#projects">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="assets/carlano-fulllogo-trim.png" alt="Carlano Technology Solutions LLC">
+    <h1>Engineering that helps the planet and people.</h1>
+    <p class="lede">Carlano builds practical systems that cut waste and ease resource load — from automating refill pumps that replace single-use plastic, to an AI bridge that moves computing off datacenters and onto local, renewable-powered machines.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#projects">See the work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Current work</div>
+      <h2>Two projects, one principle</h2>
+      <p>Carlano is focused. Each project takes a real source of waste — physical or computational — and engineers it down.</p>
+    </div>
+
+    <div class="projects">
+      <article class="card">
+        <svg class="cicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="8" y="15" width="24" height="20" rx="3" stroke="#58a136" stroke-width="2"/>
+          <path d="M20 15 V9 a4 4 0 0 1 4-4 h4" stroke="#58a136" stroke-width="2" fill="none"/>
+          <line x1="14" y1="22" x2="26" y2="22" stroke="#3f7a23" stroke-width="2"/>
+          <line x1="14" y1="28" x2="22" y2="28" stroke="#3f7a23" stroke-width="2"/>
+        </svg>
+        <div class="tag">Hardware · Automation</div>
+        <h3>Sustainable Pump System</h3>
+        <p>An automated dispensing system for bulk and refill retail. By making pump-based dispensing reliable and self-serve, it removes friction from buying without packaging — so single-use plastic stops being the default.</p>
+        <div class="impact"><strong>Goal:</strong> make zero-waste refill as easy as grabbing a packaged product.</div>
+      </article>
+
+      <article class="card">
+        <svg class="cicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 18 a7 7 0 0 1 14 0" stroke="#58a136" stroke-width="2" fill="none"/>
+          <path d="M9 25 a8 8 0 0 1 8-8 h6 a7 7 0 0 1 0 14 H13 a5 5 0 0 1 -4-6z" stroke="#58a136" stroke-width="2" fill="none"/>
+          <line x1="20" y1="31" x2="20" y2="37" stroke="#3f7a23" stroke-width="2"/>
+          <path d="M16 35 l4 2 4-2" stroke="#3f7a23" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="tag">AI · Sustainable compute</div>
+        <h3>Cloud2GroundAI</h3>
+        <p>A bridge that lets a cloud assistant delegate heavy, mechanical work to a capable local model running on the user's own machine. The expensive token generation happens on the ground — quieter on cost, lighter on the grid, and clear about when delegation actually helps.</p>
+        <p><a href="https://github.com/carlanotech/Cloud2GroundAI/releases/latest">Download for Mac — free preview →</a> &nbsp;·&nbsp; <a href="cloud2groundai.html">Learn more</a></p>
+        <div class="impact"><strong>Goal:</strong> shift compute load off datacenters and onto local, renewable-powered hardware.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Capabilities</div>
+      <h2>What Carlano does</h2>
+      <p>The same systems-engineering discipline behind one-of-a-kind science instruments, pointed at problems worth solving.</p>
+    </div>
+    <div class="grid3">
+      <div class="svc">
+        <h3><span class="dot"></span>Systems engineering</h3>
+        <p>Requirements, trade studies, and verification for hardware that has to work the first time. Rigor without bureaucracy.</p>
+      </div>
+      <div class="svc">
+        <h3><span class="dot"></span>Automation &amp; controls</h3>
+        <p>PLC programming, robotics, and motion control — the mechanical, electrical, and software pieces that make a physical system run on its own.</p>
+      </div>
+      <div class="svc">
+        <h3><span class="dot"></span>Sustainable tech R&amp;D</h3>
+        <p>Prototyping ideas that reduce waste and resource load — and being honest about which ones actually move the needle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about">
+        <div class="sec-head" style="margin-bottom:24px">
+          <div class="kicker">About</div>
+          <h2>A small shop with a clear aim</h2>
+        </div>
+        <p>Carlano Technology Solutions LLC is an independent engineering practice founded on a simple belief: good engineering should leave the planet and the people on it better off than it found them.</p>
+        <p>That means choosing projects where the engineering itself does the good — not as an afterthought, but as the point. Less plastic. Less wasted computer power. Systems that are honest about their trade-offs and built to actually ship.</p>
+        <p>Right now that focus is two projects: the Sustainable Pump System and Cloud2GroundAI. Deliberately few, done well.</p>
+      </div>
+      <aside class="principles">
+        <h4>How we work</h4>
+        <ul>
+          <li>Pick problems where the engineering is the environmental win.</li>
+          <li>Build one of each thing, and build it right.</li>
+          <li>Be honest about what helps and what doesn't.</li>
+          <li>Stay small enough to stay focused.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-alt">
+  <div class="wrap contact">
+    <h2>Let's talk</h2>
+    <p>Questions, collaborations, or interest in either project — reach out directly.</p>
+    <a class="mail" href="mailto:carlanotech@pm.me">carlanotech@pm.me</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr">2026</span> Carlano Technology Solutions LLC. All rights reserved.</div>
+    <div><a href="mailto:carlanotech@pm.me">carlanotech@pm.me</a></div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
