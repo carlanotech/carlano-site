@@ -93,7 +93,7 @@
     <p style="margin-top:22px">
       <a class="mail" style="background:var(--accent);color:#fff;border-color:var(--accent)" href="https://github.com/carlanotech/Cloud2GroundAI/releases/latest">Download for Mac — free preview</a>
     </p>
-    <p style="font-size:.9rem;color:var(--muted);margin-top:10px">Apple Silicon · macOS 14+ · signed &amp; notarized. Requires 16&nbsp;GB memory and your own Claude account.</p>
+    <p style="font-size:.9rem;color:var(--muted);margin-top:10px">Apple Silicon · macOS 14+ · signed &amp; notarized. 16&nbsp;GB memory minimum, 24&nbsp;GB recommended. Requires your own Claude account.</p>
   </div>
 </section>
 
@@ -111,6 +111,19 @@
       <li>Built-in knowledge of <em>when</em> to delegate and when not to — delegation only when it actually helps.</li>
       <li>Keeps the work transparent and reviewable rather than a black box.</li>
     </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>It checks the work before you see it</h2>
+    <p>Delegated code can be verified automatically before it comes back. One line in the request states what the result should be, and Cloud2GroundAI runs the generated code against it — catching an invented function that would crash on first use, or a calculation that runs cleanly and quietly returns the wrong number. The cloud assistant still reviews the result; <strong>your own machine proves it actually runs</strong>.</p>
+
+    <h2>It gets out of the way when idle</h2>
+    <p>Power tracks work. When nothing is being delegated, <strong>Cloud2GroundAI costs effectively nothing</strong> — a fraction of one percent of a single processor core. The local model is held in memory only while it is useful: unloaded quickly when you are on battery, kept warm while you are plugged in, since keeping it ready costs little on wall power and real battery life otherwise.</p>
+
+    <h2>It runs in memory, not on your disk</h2>
+    <p>While the model works it lives entirely in RAM, in memory the system cannot page out to storage. <strong>It is never written to your SSD</strong>, so it causes no drive wear from swapping. The trade-off is worth stating plainly: while loaded it holds around 8.5&nbsp;GB that other applications cannot reclaim, so a Mac with memory to spare will feel considerably better than one already running close to full.</p>
   </div>
 </section>
 
