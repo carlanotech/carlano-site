@@ -110,6 +110,13 @@
   .card .impact strong{color:var(--accent-deep);font-weight:650}
   .cicon{width:38px;height:38px;margin-bottom:18px}
 
+  /* Real app icon beside the project title, so it matches what people see in
+     their Dock. Replaces the generic line-art icon on that card. */
+  .card-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  .appicon{width:60px;height:60px;flex:0 0 auto;display:block}
+  .card-head .tag{margin-bottom:4px}
+  .card-head h3{margin-bottom:0}
+
   /* ---------- services ---------- */
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   @media(max-width:760px){.grid3{grid-template-columns:1fr}}
@@ -183,14 +190,13 @@
 
     <div class="projects">
       <article class="card">
-        <svg class="cicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12 18 a7 7 0 0 1 14 0" stroke="#58a136" stroke-width="2" fill="none"/>
-          <path d="M9 25 a8 8 0 0 1 8-8 h6 a7 7 0 0 1 0 14 H13 a5 5 0 0 1 -4-6z" stroke="#58a136" stroke-width="2" fill="none"/>
-          <line x1="20" y1="31" x2="20" y2="37" stroke="#3f7a23" stroke-width="2"/>
-          <path d="M16 35 l4 2 4-2" stroke="#3f7a23" stroke-width="2" fill="none"/>
-        </svg>
-        <div class="tag">AI · Sustainable compute</div>
-        <h3>Cloud2GroundAI</h3>
+        <div class="card-head">
+          <img class="appicon" src="assets/cloud2ground-icon.png" alt="Cloud2GroundAI app icon — a white cloud with a yellow lightning bolt on a dark navy rounded square">
+          <div>
+            <div class="tag">AI · Sustainable compute</div>
+            <h3>Cloud2GroundAI</h3>
+          </div>
+        </div>
         <p>A bridge that lets a cloud assistant delegate heavy, mechanical work to a capable local model running on the user's own machine. The expensive token generation happens <strong>on the ground — off of datacenters and on your own local machine</strong> — quieter on cost, lighter on the grid, and clear about when delegation actually helps.</p>
         <p><a href="https://github.com/carlanotech/Cloud2GroundAI/raw/main/Cloud2GroundAI_v2.4.dmg">Download for Mac — free preview →</a> &nbsp;·&nbsp; <a href="cloud2groundai.html">Learn more</a></p>
         <div class="impact"><strong>Goal: shift compute load off datacenters and onto your own local hardware</strong>, potentially renewable-powered.</div>
