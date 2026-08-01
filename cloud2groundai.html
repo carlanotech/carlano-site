@@ -72,6 +72,13 @@
   .mail:hover{border-color:var(--accent);text-decoration:none}
 
   footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem;margin-top:30px}
+
+  figure{margin:0 0 30px}
+  figure img{
+    display:block;width:100%;height:auto;border:1px solid var(--line);
+    border-radius:10px;box-shadow:var(--shadow);
+  }
+  figcaption{color:var(--muted);font-size:.9rem;margin-top:10px}
 </style>
 </head>
 <body>
@@ -124,6 +131,22 @@
 
     <h2>It runs in memory, not on your disk</h2>
     <p>While the model works it lives entirely in RAM, in memory the system cannot page out to storage. <strong>It is never written to your SSD</strong>, so it causes no drive wear from swapping. The trade-off is worth stating plainly: while loaded it holds around 8.5&nbsp;GB that other applications cannot reclaim, so a Mac with memory to spare will feel considerably better than one already running close to full.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it looks like</h2>
+
+    <figure>
+      <img src="assets/screenshot-setup.png" alt="Cloud2GroundAI setup wizard on step 5 of 5, Test the bridge, with the earlier steps checked off and a log showing the model downloaded, skill installed, watcher script installed and background service loaded.">
+      <figcaption>Setup runs through five steps and finishes by sending a real request end to end — so you know the whole chain works before you rely on it.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/screenshot-status-chat.png" alt="Two Cloud2GroundAI windows side by side. The Status window shows the MLX backend running, the model name, the watcher process and local processing totals. The Ground Chat window explains that you are talking to the local model and no data leaves the machine.">
+      <figcaption>The status window shows exactly what is running and how much work has stayed local. Ground Chat talks to the model on your own Mac — nothing in that conversation leaves the machine.</figcaption>
+    </figure>
   </div>
 </section>
 
