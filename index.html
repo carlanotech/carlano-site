@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carlano Technology Solutions LLC — Engineering for the planet and people</title>
-<meta name="description" content="Carlano Technology Solutions LLC builds engineering systems that reduce waste and resource load — automated bulk-refill pumps that cut single-use plastic, and an AI bridge that shifts compute off datacenters and onto your own local machine, potentially renewable-powered.">
+<meta name="description" content="Carlano Technology Solutions LLC builds engineering systems that reduce waste and resource load — including an AI bridge that shifts compute off datacenters and onto your own local machine, potentially renewable-powered.">
 <meta name="author" content="Carlano Technology Solutions LLC">
 
 <!-- Open Graph / social preview -->
@@ -92,7 +92,9 @@
   .sec-head p{color:var(--ink-soft);font-size:1.05rem}
 
   /* ---------- projects ---------- */
-  .projects{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  /* auto-fit collapses empty tracks, so this is one full-width card today and
+     goes back to two columns automatically if a second project returns. */
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px}
   @media(max-width:760px){.projects{grid-template-columns:1fr}}
   .card{
     background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;
@@ -163,7 +165,7 @@
   <div class="wrap">
     <img class="hero-logo" src="assets/carlano-fulllogo-trim.png" alt="Carlano Technology Solutions LLC">
     <h1>Engineering that helps the planet and people.</h1>
-    <p class="lede">Carlano builds practical systems that cut waste and ease resource load — from automating refill pumps that replace single-use plastic, to an AI bridge that <strong>moves computing off datacenters and onto your own local machine</strong>, potentially renewable-powered.</p>
+    <p class="lede">Carlano builds practical systems that cut waste and ease resource load — starting with an AI bridge that <strong>moves computing off datacenters and onto your own local machine</strong>, potentially renewable-powered.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#projects">See the work</a>
       <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -175,24 +177,11 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="kicker">Current work</div>
-      <h2>Two projects, one principle</h2>
+      <h2>The work</h2>
       <p>Carlano is focused. Each project takes a real source of waste — physical or computational — and engineers it down.</p>
     </div>
 
     <div class="projects">
-      <article class="card">
-        <svg class="cicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="8" y="15" width="24" height="20" rx="3" stroke="#58a136" stroke-width="2"/>
-          <path d="M20 15 V9 a4 4 0 0 1 4-4 h4" stroke="#58a136" stroke-width="2" fill="none"/>
-          <line x1="14" y1="22" x2="26" y2="22" stroke="#3f7a23" stroke-width="2"/>
-          <line x1="14" y1="28" x2="22" y2="28" stroke="#3f7a23" stroke-width="2"/>
-        </svg>
-        <div class="tag">Hardware · Automation</div>
-        <h3>Sustainable Pump System</h3>
-        <p>An automated dispensing system for bulk and refill retail. By making pump-based dispensing reliable and self-serve, it removes friction from buying without packaging — so single-use plastic stops being the default.</p>
-        <div class="impact"><strong>Goal:</strong> make zero-waste refill as easy as grabbing a packaged product.</div>
-      </article>
-
       <article class="card">
         <svg class="cicon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M12 18 a7 7 0 0 1 14 0" stroke="#58a136" stroke-width="2" fill="none"/>
@@ -243,8 +232,8 @@
           <h2>A small shop with a clear aim</h2>
         </div>
         <p>Carlano Technology Solutions LLC is an independent engineering practice founded on a simple belief: good engineering should leave the planet and the people on it better off than it found them.</p>
-        <p>That means choosing projects where the engineering itself does the good — not as an afterthought, but as the point. Less plastic. Less wasted computer power. Systems that are honest about their trade-offs and built to actually ship.</p>
-        <p>Right now that focus is two projects: the Sustainable Pump System and Cloud2GroundAI. Deliberately few, done well.</p>
+        <p>That means choosing projects where the engineering itself does the good — not as an afterthought, but as the point. Less wasted computer power. Systems that are honest about their trade-offs and built to actually ship.</p>
+        <p>Right now that focus is Cloud2GroundAI. Deliberately few, done well.</p>
       </div>
       <aside class="principles">
         <h4>How we work</h4>
